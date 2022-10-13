@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/status"
 
-	"github/golang-british/logger"
+	"github.com/linhbkhn95/golang-british/logger"
 )
 
 // UnaryServerInterceptor returns a new unary server interceptor that wraps output error.
