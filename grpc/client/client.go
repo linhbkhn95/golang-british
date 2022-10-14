@@ -10,10 +10,10 @@ import (
 // Example:
 //
 // serverAddr := "localhost:10443"
-// client, closeFunc, err := NewClient(serverAddr, func(conn grpc.ClientConnInterface) examplev1.ExampleServiceClient {
-//	 return examplev1.NewExampleServiceClient(conn)
-// })
 //
+//	client, closeFunc, err := NewClient(serverAddr, func(conn grpc.ClientConnInterface) examplev1.ExampleServiceClient {
+//		 return examplev1.NewExampleServiceClient(conn)
+//	})
 func NewClient[T any](serverAddr string, newClientFunc func(conn grpc.ClientConnInterface) T, opts ...grpc.DialOption) (T, func() error, error) {
 	if len(opts) == 0 {
 		opts = []grpc.DialOption{grpc.WithTransportCredentials(insecure.NewCredentials())}

@@ -1,6 +1,6 @@
 module github.com/linhbkhn95/golang-british
 
-go 1.18
+go 1.19
 
 require (
 	github.com/golang/protobuf v1.5.2
